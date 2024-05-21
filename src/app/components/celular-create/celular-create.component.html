@@ -1,0 +1,43 @@
+<!-- src/app/components/celular-create/celular-create.component.html -->
+<div class="celular-create">
+    <h2>Crear Nuevo Celular</h2>
+    <form [formGroup]="celularForm" (ngSubmit)="onSubmit()">
+      <label>
+        Marca:
+        <input formControlName="marca">
+      </label>
+      <label>
+        Serial:
+        <input formControlName="serial">
+      </label>
+      <label>
+        Fecha de Compra:
+        <input type="date" formControlName="fechaCompra">
+      </label>
+      <label>
+        Año de Lanzamiento:
+        <input formControlName="anioLanzamiento">
+      </label>
+      <label>
+        Precio:
+        <input formControlName="precio">
+      </label>
+      <label>
+        Sistema Operativo:
+        <select formControlName="sistemaOperativo">
+          <option value="Android">Android</option>
+          <option value="iOS">iOS</option>
+        </select>
+      </label>
+      <label>
+        Gama:
+        <select formControlName="gama">
+          <option value="Alta">Alta</option>
+          <option value="Media">Media</option>
+          <option value="Baja">Baja</option>
+        </select>
+      </label>
+      <button type="submit">Crear</button>
+    </form>
+  </div>
+  
